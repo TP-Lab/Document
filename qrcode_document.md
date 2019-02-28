@@ -28,6 +28,18 @@
 }
 ~~~
 
+### IOST 底层
+~~~
+{
+  "address":"xxxxxxxxxxxx" //收款账号
+  "amount":"1" //数目
+  "symbol":"iost" //代币名字
+  "contract":"token.iost" //合约
+  "blockchain":"iost" //底层标识 enu bos等
+  "action":"tokenTransfer" //转账操作标识
+}
+~~~
+
 ### 创建账号
 ~~~
 {
