@@ -53,3 +53,12 @@
 ~~~
   SIG_K1_Kda4FjEawxZNT5yCrKbpy2WzSQtzt8HUr9oykDbjgpTMHPCBzDBeufa1bGXUJRja15m2RZzR99TG1U4gaL7rYZHbRnwiXJ
 ~~~
+
+### IM 群二维码
+~~~
+{
+  "type":23
+  "teamId":"1603508625"
+  "name":"team name"
+}
+~~~
