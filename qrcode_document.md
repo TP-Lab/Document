@@ -74,3 +74,7 @@
   "name":"team name"
 }
 ~~~
+
+
+
+以及 支持 [simpleWallet](https://github.com/TP-Lab/SimpleWallet) 协议  
