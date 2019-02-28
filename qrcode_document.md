@@ -69,7 +69,7 @@
 ### IM 群二维码
 ~~~
 {
-  "type":23
+  "type":23 // 后面会改成 action: 'joinTeam'
   "teamId":"1603508625"
   "name":"team name"
 }
