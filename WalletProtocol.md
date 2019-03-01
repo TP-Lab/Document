@@ -11,7 +11,9 @@
   precision: 4,
   blockchain: 'EOS', // BTC, ETH, EOS, BOS, MEETONE 
   amount: '2.4', // 可选  真实转账数量
+  memo: 'something to say', // 可选 备注信息
   chainid: 'd5a3d18fbb3c084e3b1f3fa98c21014b5f3db536cc15d08f9f6479517c6a3d86' // 可选 
+  
 }
 ```
 
