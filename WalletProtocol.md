@@ -29,3 +29,26 @@
   amount: '2.4' // 可选  真实转账数量
 }
 ```
+
+
+
+
+## 比较通用字段
+- 后续补充的其他公链,尽量保持一致性
+```javascript
+{
+  protocol: '一个固定的响亮的名字', 
+  action: 'transfer',
+  address: '', 
+  contract: '',
+  symbol: '',
+  blockchain: '',
+  amount: '' // 可选  真实转账数量
+}
+```
+
+
+
+
+
+
