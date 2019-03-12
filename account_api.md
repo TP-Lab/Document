@@ -5,7 +5,7 @@ Request URL
 ```
 POST
 ```golang
-        blockchain_id: 4, //默认4 表示eos底层
+        blockchain_id: 4, //4表示eos底层， 6表示bos底层， 7表示iost底层
         code: "815101",
         account: "tokenpocket2",
         public_key: "EOS5xy38sAWXZ5kStiQSKGK1mJNeKVfeJV3a3kpPRpqt1yryUsTGF",
