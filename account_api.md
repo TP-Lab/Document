@@ -20,3 +20,25 @@ Response
         data: "d0ff5bbecc0d8cc2c48caf306e7a2585a79ffd510cb77e3a39d57222ba443012"
    }
 ```
+
+## 通过网页邮件获取邀请码
+Request URL
+```javascript
+   /v1/invite_code/open_codebyemail
+```
+POST
+```golang
+        blockchain_id: 4, //4表示eos底层， 6表示bos底层， 7表示iost底层
+        email: "heipackermail@gmail.com",
+        app_key: "newdex"
+```
+Response
+```javascript
+   {
+        result: 0, //0表示成功
+        message: "success",
+        data: {
+            "code": "120302"
+        }
+   }
+```
