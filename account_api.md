@@ -44,7 +44,7 @@ Response
 ```
 
 
-## dapp注册帐号接口（支持手机号等中心化方式，也支持非中心化方式）
+## dapp注册帐号接口（支持手机号等中心化方式，也支持非中心化方式, 开发者需要找我们要appkey）
 Request URL
 ```javascript
    /v1/invite_code/createacc
