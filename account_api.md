@@ -59,7 +59,7 @@ POST
         owner: 'EOS5xy38sAWXZ5kStiQSKGK1mJNeKVfeJV3a3kpPRpqt1yryUsTGF' //默认为空， 服务端生成
         active: 'EOS5xy38sAWXZ5kStiQSKGK1mJNeKVfeJV3a3kpPRpqt1yryUsTGF' //默认跟owner一样
         center_way: 0 // 创建方式， 0表示手机号方式，1表示邮箱方式， 只有account_type=1这个参数才有效
-        center_num: '' //只有account_type=1这个参数才有效， 如果center_way=0则是手机号码， 如果center_way=1则是邮箱
+        center_num: '18700647311' //只有account_type=1这个参数才有效， 如果center_way=0则是手机号码， 如果center_way=1则是邮箱
         timestamp: 1552397394 //单位秒
         sign: '1015f06e780ffb68a4f556afabcb9b8604aa4fb8be1b35fc24c01a99bdc4af27'  //签名包含上面参数, 所有参数名按字母排序l， app_key放最前面，拼接成app_key=*****&app_id='newdex'&key1=value&key2=value2做sha256
 ```
