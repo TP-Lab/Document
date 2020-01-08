@@ -115,7 +115,7 @@ Body: transaction对象，具体格式参照步骤二的数据
     "message": "success",
 	"result": 0,
 	"data":{
-	    "signatures":SIG_K0_K0XXXX
+	    "signature":SIG_K0_K0XXXX
 	}
 }
 result:
