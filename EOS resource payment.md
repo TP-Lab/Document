@@ -1,5 +1,8 @@
 该文档以EOS转账为例描述了EOS资源代付签名基本流程
+This document uses EOS transfer as an example to describe the basic flow of the EOS resource payment (Only charge the first authorizer) signature.
 ##  准备数据
+## Prepare the data
+
 ~~~
 {
 		"expiration": "2020-01-08T02:41:45",
@@ -11,7 +14,8 @@
 		"actions": [{
 			"account": "eosio.token",
 			"authorization": [{
-				"actor": "1stbill.tp", //代付资源账号，必须放在authorization数组首位
+				"actor": "1stbill.tp", //代付资源账号，必须放在authorization数组首位  The resource payer's account must be placed first in the authorization array
+
 				"permission": "active"
 			}, {
 				"actor": "xiaoyuantest",
@@ -31,6 +35,8 @@
 ~~~
 
 ##  将步骤一准备的数据使用操作账号签名，这里使用的是xiaoyuantest账号签名，得到以下数据
+## Sign the data of step 1 with the operation account. Here we sign with xiaoyuantest to get the following data
+
 ~~~
 {
 		"compression": "none",
@@ -61,6 +67,8 @@
 ~~~
 
 ##  将步骤2得到的transaction对象取出，使用TP签名接口签名，得到结果如下
+## Take the transaction object obtained in step 2 and sign it with the TP signature interface. The result is as follows
+
 ~~~
 {
 	"message": "success",
@@ -72,6 +80,8 @@
 ~~~
 
 ##  将TP签名后得到的signature插入步骤2中signatures数组的首位。并将组装好的数据广播。最终广播的数据结构如下
+## Insert the signature (obtained by the TP signature) into the first position of the signatures array obtained in step 2. And broadcast the assembled data. The data structure of the final broadcast is as follows
+
 ~~~
 {
 		"compression": "none",
@@ -98,19 +108,25 @@
 			"transaction_extensions": []
 		},
 		//TP接口签名得到的数据必须放在首位，否则会导致操作失败
+                //The data signed by the TP interface must be put first, or the operation will fail
 		"signatures": ["SIG_K0_K0XXX","SIG_K1_K1XXX"]
 	}
 ~~~
 
 ## TP签名接口说明
+## TP signature interface description
+
 ~~~
 请求：
+Request:
+
 
 POST: "https://preserver.mytokenpocket.vip/v1/sign" "Accept: application/json"
-Header: Signer //代付签名账号，示例中是1stbill.tp
-Body: transaction对象，具体格式参照步骤二的数据
+Header: Signer //代付签名账号，示例中是1stbill.tp  In the example, the payer's signer account is 1stbill.tp
+Body: transaction对象，具体格式参照步骤二的数据  transaction object, refer to the data in step 2 for the specific format
 
 返回：
+Response:
 {
     "message": "success",
 	"result": 0,
@@ -119,8 +135,8 @@ Body: transaction对象，具体格式参照步骤二的数据
 	}
 }
 result:
-0:成功
-101：可以代付资源不足，提示用户充值
-103：失败
-108：拒绝签名
+0:成功 Success
+101：可以代付资源不足，提示用户充值  Insufficient resource in the payer's account, please remind the user to top-up resources.
+103：失败 Fail
+108：拒绝签名 Refuse to sign
 ~~~
