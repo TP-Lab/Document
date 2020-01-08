@@ -1,5 +1,5 @@
-该文档以EOS转账为例描述了EOS资源代付签名基本流程
-This document uses EOS transfer as an example to describe the basic flow of the EOS resource payment (Only charge the first authorizer) signature.
+# 该文档以EOS转账为例描述了EOS资源代付签名基本流程
+# This document uses EOS transfer as an example to describe the basic flow of the EOS resource payment (Only charge the first authorizer) signature.
 ##  准备数据
 ## Prepare the data
 
